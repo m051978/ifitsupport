@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.select-language-page{
+    background-color: #011D5F;
+}
+
+body{
+    margin: 0;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    /* background: linear-gradient(#040404, #000);; */
+    background-color: #000;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+
+.ifit-logo{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+}
+
+
+.flags {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 2.5rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.flag{  
+    transition: ease 0.5s;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.656);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.656);
+    margin-top: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.646);
+}
+
+.flag:hover{
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.493);
+    margin-top: 35%;
+}
+
+.flags a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: initial;
+}
+
+.flags p{
+    position: relative;
+    font-size: 1rem;
+    padding-top: 30px;  
+    color: rgba(255, 255, 255, 0.646)
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    max-width: 30em;
+}
+
+header{
+   height: 100vh;
+   /* min-width: 40em;  */
+   width: 100vw;
+   background: 
+    url(img/images/main_image.png)
+    no-repeat center;
+   background-size: cover;
+   overflow-x: hidden;
+
+}
+
+/* Set flex Layouts */
+.navbar,
+.header-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: #111;
+    padding: 1em 2em;
+}
+
+.navbar a,
+.sidebar a{
+    color: #111;
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+.navbar li a,
+.menu-btn{
+    transition: 0.3s;
+    padding: 0.3em 0.8em;
+    border-radius: 0.5em;
+}
+
+.navbar li a:hover,
+.menu-btn:hover{
+    background: #0191DA;
+}
+
+.brand{
+    width: 7em;
+}
+
+.menu-btn{
+    cursor: pointer;
+}
+
+.menu-btn-mobile{
+    display: none;
+}
+
+.sidebar{
+    color: #111;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: -20em;
+    padding: 2em;
+    min-width: 20em;
+    height: 100vh;
+    overflow: scroll;
+    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    transition: 0.4s ease-in-out;
+}
+
+.close-btn{
+    cursor: pointer;
+    text-align: right;
+}
+
+.sidebar li{
+    margin: 1.5em 0;
+}
+
+.sidebar-backdrop{
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    opacity: 0;
+    display: none;
+    transition: 0.3s;
+}
+
+.header-body{
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    padding: 0 2em;
+    justify-content: center;
+    background: linear-gradient(#ffffff00,#0202026c, #060606c8, #060606fc, #000);;
+}
+
+.header-body p{
+    font-size: .9em;
+}
+
+.title{
+    font-size: 3.4em;
+    padding-bottom: .2em;
+}
+
+
+@media (max-width: 1200px) {
+    body{
+        margin: 0;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        /* background: linear-gradient(#040404, #000);; */
+        background-color: #000;
+        overflow-x: hidden;
+        
+    }
+    
+    .navbar ul{
+        display: none;
+    }
+    .menu-btn-mobile{
+        display: block;
+        cursor: pointer;
+        background: #0191DA;
+        padding: 0.4em 1em;
+        border-radius: 0.7em;
+    }
+}
+
+@media (max-width: 450px) {
+    html{
+        font-size: 14px;
+    }
+
+    body{
+        overflow-x: hidden;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .navbar{
+        color: #111;
+        padding: 2.5em 2em;
+    }
+
+    header{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .header-body{
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        padding: 0 2em;
+        justify-content: center;
+        background: linear-gradient(#ffffff00,#0202026c, #060606c8, #060606fc, #000);
+    }
+
+    .title{
+        font-size: 3em;
+        padding-bottom: .2em;
+    }
+
+    header{
+        height: 100vh;
+        /* min-width: 40em;  */
+        width: 100vw;
+        background: 
+         url(img/images/main_image.png)
+         no-repeat center;
+        background-size: cover;
+        overflow-x: hidden;
+     
+     }
+}
+
+
+
+@media (max-width:450px){
+    .ifit-logo{
+        width: 90%;
+        padding-top: 60%;
+    }
+
+    .flags {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: .1rem;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    .flag{  
+        transition: ease 0.5s;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.656);
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.656);
+        margin-top: 80%;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.646);
+    }
+
+    .flags p{
+        position: relative;
+        font-size: .5rem;
+        padding-top: 15px;  
+        color: rgba(255, 255, 255, 0.646)
+    }
+
+
+}
+
+
+
