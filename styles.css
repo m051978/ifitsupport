@@ -160,7 +160,7 @@ header{
     top: 0;
     right: -25em;
     padding: 2em;
-    min-width: 25em;
+    min-width: 20em;
     height: 100vh;
     overflow: scroll;
     box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.5);
