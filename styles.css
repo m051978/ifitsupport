@@ -81,8 +81,8 @@ body{
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.656);
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.656);
         margin-top: 80%;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         object-fit: cover;
         cursor: pointer;
         border: 1px solid rgba(255, 255, 255, 0.646);
@@ -90,8 +90,9 @@ body{
 
     .flags p{
         position: relative;
-        font-size: .7rem;
+        font-size: 10px;
         padding-top: 15px;  
+        color: rgba(255, 255, 255, 0.646)
     }
 }
 
