@@ -1,0 +1,559 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+}
+
+.ifit-logo{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.flags {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.flag{  
+    transition: ease 0.5s;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.656);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.656);
+    margin-top: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.646);
+}
+
+.flag:hover{
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.493);
+    margin-top: 35%;
+}
+
+.flags a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: initial;
+}
+
+.flags p{
+    position: relative;
+    font-size: 1rem;
+    padding-top: 30px;  
+    color: rgba(255, 255, 255, 0.646)
+}
+
+/* **MAIN PAGE DESTOP VERSION** */
+
+html{
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    position: absolute; 
+    width: 100%; 
+    height: 100vh;
+    overflow-x: hidden
+}
+
+.select-language-page{
+    background-color: #011D5F;
+}
+
+body{
+    margin: 0;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#main-header{
+   height: 100vh;
+   background: 
+    url(img/images/main_image.png)
+    no-repeat center;
+   background-size: cover;
+}
+
+/* Set flex Layouts */
+.navbar,
+.header-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: #111;
+    padding: 1.5em 2.8em;
+}
+
+.navbar a,
+.sidebar a{
+    color: #111;
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+.navbar li a,
+.menu-btn{
+    padding: 1.4em 3em;
+    border-radius: 1em;
+    background: linear-gradient(to left, #0191DA 50%, #28e1a5 50%) right;
+    background-size: 200% 100%;
+    transition: .3s;
+}
+
+.navbar li a:hover,
+.menu-btn:hover{ 
+    background-position: left;
+}
+
+.brand{
+    width: 7em;
+}
+
+.menu-btn{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.menu-btn-mobile{
+    display: none;
+}
+
+.sidebar{
+    color: #111;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: -25em;
+    padding: 2em;
+    min-width: 20em;
+    height: 100vh;
+    overflow: scroll;
+    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    transition: 0.4s ease-in-out;
+}
+
+
+.close-btn{
+    cursor: pointer;
+    text-align: right;
+}
+
+.close-btn span{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+}
+
+
+.close-btn span:hover{
+    background: rgb(225, 225, 225);
+}
+
+
+.sidebar li{
+    margin: 2.5em 0;
+}
+
+.sidebar-backdrop{
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    opacity: 0;
+    display: none;
+    transition: 0.3s;
+}
+
+.header-body{
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    padding: 0 2em;
+    justify-content: center;
+    background: linear-gradient(#ffffff00,#0202026c, #060606c8, #060606fc, #000);;
+}
+
+.header-body p{
+    font-size: .9em;
+    letter-spacing: .1rem;
+}
+
+.title{
+    font-size: 3.4em;
+    padding-bottom: .2em;
+    letter-spacing: .1rem;
+}
+
+.arrow {
+    width: 1.4em;
+    animation: arrow 5s ease infinite;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* Arrow animation */
+@keyframes arrow{
+
+    40% {
+        transform: translateY(0px);
+    }
+    45% {
+        transform: translateY(8px);
+    }
+    55% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(8px);
+    }
+    65% {
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.content{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.box{
+    text-align: center;
+    /* transform: translateY(-100px);
+    transition: all 0.5s ease; */
+}
+
+/* .show{
+    transform: translateY(0);
+} */
+
+.box h1{
+    padding-top: 10%;
+}
+
+.box p{
+    padding: 0 30px;
+    font-size: .9em;
+}
+
+.box p a{
+    color: #0191DA;
+    font-weight: bolder;
+}
+
+.main-item-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: minmax(300px, auto);
+    grid-gap: 2rem;
+    padding-top: 5%;
+    
+}
+
+
+.item-container .item .item1{
+    background: 
+    url(img/images/treadmill.jpg)
+    no-repeat center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.item-container .item .item2{
+    background: 
+    url(img/images/bike.jpg)
+    no-repeat center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.item-container .item .item3{
+    background: 
+    url(img/images/crosstrainer.jpg)
+    no-repeat center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.item-container .item .item4{
+    background: 
+    url(img/images/multistation.jpg)
+    no-repeat center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.item-container .item .item5{
+    background: 
+    url(img/images/rower.jpg)
+    no-repeat center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.item-container .item .hover{
+    transition: .4s ease-in-out;
+}
+
+.item-container .item .hover:hover{
+    scale: 1.05;
+    filter: contrast(50%);
+    color: rgb(0, 0, 0);
+} 
+
+
+.item-container .item p{
+    display: flex;
+    padding: 15px 0 0 15px;
+    align-items: flex-start;
+    font-size: 1em;
+    color: rgb(123, 123, 123);
+    font-weight: bolder;
+}
+
+
+.iframe{
+    padding: 56.25% 0 0 0; 
+    position: relative;
+}
+
+.video{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.footer{
+    border-top: 1px solid #fff ;
+    margin: 0 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: .8em;
+}
+
+
+@media (max-width: 1200px) {
+    .navbar ul{
+        display: none;
+    }
+    .menu-btn-mobile{
+        display: block;
+        cursor: pointer;
+        background: #0191DA;
+        padding: 1.4em 3em;
+        border-radius: 1em;
+    }
+
+
+    .ifit-logo{
+        width: 90%;
+        padding-top: 10%;
+    }
+
+    .flags {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: .1rem;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    .flag{  
+        transition: ease 0.5s;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.656);
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.656);
+        margin-top: 50%;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.646);
+    }
+
+    .flags p{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (max-width: 768px){
+    .flags p{
+        font-size: .8rem;
+    }
+
+    .item-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (max-width: 450px) {
+
+    .ifit-logo{
+        width: 90%;
+        padding-top: 60%;
+    }
+
+
+
+    .flags {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: .1rem;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    .flag{  
+        transition: ease 0.5s;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.656);
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.656);
+        margin-top: 80%;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.646);
+    }
+
+    .flags p{
+        font-size: .5rem;
+    }
+
+    /* **MAIN PAGE MOBILE VERSION** */
+
+    html{
+        font-size: 14px;
+    }
+
+    .navbar{
+        color: #ffffff;
+        padding: 1.5em 2em;
+        font-weight: bolder;
+    
+        
+    }
+
+    .menu-btn-mobile{
+        padding: .9em 2.4em;
+        border-radius: 1em;
+        background: none;
+        border: 1px solid #28e1a684;
+        font-size: 1em;
+    }
+
+    header{
+        height: 80vh;
+    }
+
+    .header-body{
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        padding: 0 2em;
+        justify-content: center;
+        background: linear-gradient(#ffffff00,#0202026c, #060606c8, #060606fc, #000);
+    }
+
+    .title{
+        font-size: 3em;
+        padding-bottom: .2em;
+    }
+
+    .content{
+        margin-top: 40%;
+    }
+
+    .item-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+
+
