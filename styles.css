@@ -603,6 +603,17 @@ footer .copy-right {
     .content-assembly{
         grid-template-columns: 1fr;
     }
+
+    .content-assembly .box-light-dark .box-content .video{
+        width: 100%;
+        height: 80%;
+    }
+
+    .content-assembly .box-light-dark .box-content .text-box {
+        position: absolute;
+        width: 100%;
+        top: 80%;
+    }
     
 }
 
