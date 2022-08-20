@@ -719,6 +719,10 @@ footer .copy-right {
         top: 100%;
     }
     
+    .content-assembly .box-light-dark .box-content .video{
+        height: 100%;
+    }
+    
     .content-assembly .box-light-dark .box-content .text-box h3{
         font-size: 1.5rem;
         padding-top: 1rem;
